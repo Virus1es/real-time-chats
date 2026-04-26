@@ -5,10 +5,6 @@ const LongPulling = () => {
     const [messages, setMessages] = useState([]);
     const [value, setValue] = useState('');
 
-    useEffect(() => {
-        void subscribe();
-    }, [])
-
     async function subscribe() {
         try{
             const {data} = await axios.get("http://localhost:5000/get-message");
@@ -22,9 +18,13 @@ const LongPulling = () => {
         }
     }
 
+    useEffect(() => {
+        void subscribe();
+    }, []);
+
     const sendMessage = async () => {
         await axios.post("http://localhost:5000/new-message", {
-            messages: value,
+            message: value,
             id: Date.now(),
         })
     }
