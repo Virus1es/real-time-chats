@@ -8,7 +8,8 @@ const EventSourcing = () => {
     async function subscribe() {
         const eventSource = new EventSource('http://localhost:5000/connect');
         eventSource.onmessage = (event) => {
-            console.log(JSON.stringify(event.data));
+            const message = JSON.parse(event.data);
+            setMessages(prev => [message, ...prev]);
         }
     }
 
