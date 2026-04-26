@@ -6,7 +6,7 @@ const LongPulling = () => {
     const [value, setValue] = useState('');
 
     const sendMessage = async () => {
-        await axios.post("http://localhost:5000/new-messages", {
+        await axios.post("http://localhost:5000/new-message", {
             messages: value,
             id: Date.now(),
         })
