@@ -1,12 +1,12 @@
 import './App.css'
-import EventSourcing from "./EventSourcing.jsx";
+import WebSockets from "./WebSockets.jsx";
 
 function App() {
 
 
   return (
       <>
-          <EventSourcing/>
+          <WebSockets/>
       </>
   )
 }
