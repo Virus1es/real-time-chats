@@ -1,12 +1,12 @@
 import './App.css'
-import LongPolling from "./LongPolling.jsx";
+import EventSourcing from "./EventSourcing.jsx";
 
 function App() {
 
 
   return (
       <>
-          <LongPolling/>
+          <EventSourcing/>
       </>
   )
 }
